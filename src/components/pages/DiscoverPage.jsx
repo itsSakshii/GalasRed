@@ -1,11 +1,11 @@
 import MainLayout from "../layouts/MainLayout";
 
-const Vendor = () => {
+const Discover = () => {
   return (
     <MainLayout>
-      <div>vendor</div>
+      <div>discover</div>
     </MainLayout>
   );
 };
 
-export default Vendor;
+export default Discover;
