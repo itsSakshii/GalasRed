@@ -1,20 +1,22 @@
 import { useState } from "react";
 import Nav from "../ui/Nav";
+import logoImage from "../../assets/image/logo/galas.webp"; 
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); // State to control nav open/close
 
   const navLinks = [
-    { path: "/Home", label: "Home" },
-    { path: "/Event", label: "Events" },
-    { path: "/Discover", label: "Discover" },
-    { path: "/Services", label: "Services" },
-    { path: "/Blog", label: "Blog" },
-    { path: "/About", label: "About Us" },
+    { path: "/", label: "Home" },         // "/" for home route
+    { path: "/event", label: "Events" },  // Lowercase for consistency
+    { path: "/discover", label: "Discover" },
+    { path: "/services", label: "Services" },
+    { path: "/blog", label: "Blog" },
+    { path: "/about", label: "About Us" },
   ];
 
+  // Use the imported logoImage for src
   const logo = {
-    src: "src/assets/image/icons/galas-it-solutions.png",
+    src: logoImage,
     alt: "Galas IT Solutions",
   };
 

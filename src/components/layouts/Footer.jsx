@@ -5,7 +5,7 @@ const footerData = {
   logoText: galas,
   email: "info@galasitsolutions.com",
   phone: "+91 8178777874",
-  // Update iconLabels to be an array of objects
+ 
   iconLabels: [
     { name: "whatsapp", url: "https://api.whatsapp.com/send/?phone=%2B918178777874&text&type=phone_number&app_absent=0" },
     { name: "linkedin", url: "https://www.linkedin.com/company/galas-it-solutions/mycompany/" },
