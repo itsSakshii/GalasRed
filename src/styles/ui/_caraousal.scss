@@ -2,12 +2,12 @@
     animation: scroll 10s linear infinite;
     position: relative;
     will-change: transform;
+ 
+    &.paused {
+        animation-play-state: paused; // Using class to control pause
+    }
 }
-
-.carousel-inner.paused {
-    animation-play-state: paused;
-}
-
+ 
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -16,19 +16,20 @@
         transform: translateX(-90%);
     }
 }
-
+ 
 .carousel-item {
     perspective: 100px;
 }
-
+ 
 .card-content {
     perspective: 100px;
 }
-
+ 
 .img {
     transition: transform 1s;
 }
-
+ 
 .img:hover {
     transform: translateZ(20px);
 }
+
