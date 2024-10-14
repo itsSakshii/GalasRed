@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import useMarqueeAnim from "../../hooks/useMarqueeAnim";
 
@@ -13,9 +12,11 @@ const EventContent = ({ eventContent }) => {
           {marquee.items.map((item, idx) => (
             <div className="item" key={idx}>
               {item.type === "image" ? (
-                <img src={item.src} alt={item.alt} />
+                <img src={item.src} alt={item.alt} className="min-h-[80px]" />
               ) : (
-                <h4 className="event-title lg:text-4xl">{item.text}</h4>
+                <h4 className="event-title text-xs md:text-2xl lg:text-3xl">
+                  {item.text}
+                </h4>
               )}
             </div>
           ))}

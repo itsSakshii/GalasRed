@@ -17,7 +17,7 @@ export default function Services() {
 
   return (
     <section className="services flex flex-col antialiased">
-      <div className="container mx-auto p-6 antialiased">
+      <div className="container mx-auto px-4 antialiased">
         <div className="heading">
           <h2 className="text-center">
             All <span className="text-teal-200">Services</span>

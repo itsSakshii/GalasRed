@@ -13,7 +13,7 @@ export default function About() {
   return (
     <>
       <div className="section-space"></div>
-      <section className="about-section antialiased">
+      <section className="about-section antialiased container mx-auto px-4">
         <AboutContent
           content={aboutContent}
           image={img1}

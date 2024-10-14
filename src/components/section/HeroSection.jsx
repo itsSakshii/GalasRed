@@ -46,7 +46,7 @@ export default function HeroSection() {
     return (
         <>
             <section className="hero-section relative antialiased">
-                <div className="container mx-auto antialiased">
+                <div className="container mx-auto px-4 antialiased">
                     <div className="hero-section-banner antialiased">
                         <div id="scene">
                             <div className="w-full lg:h-[80vh]">

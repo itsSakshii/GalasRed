@@ -1,4 +1,3 @@
-// src/components/Preloader.js
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import video1 from "../../assets/videos/video1.mp4";
@@ -6,7 +5,7 @@ import video2 from "../../assets/videos/video2.mp4";
 import video3 from "../../assets/videos/video3.mp4";
 import video4 from "../../assets/videos/video4.mp4";
 import PreloaderContent from "../ui/PreloaderContent";
-import usePreloaderAnimation from "../../hooks/usePreloaderAnimation";
+import {usePreloaderAnimation} from "../../hooks/usePreloaderAnimation";
 import { showTransition, showHome } from "../../store/slices/preloaderSlice"; // Import actions
 import Home from "./Home";
 import PageTransition from "../ui/PageTransition";
@@ -50,6 +49,7 @@ const Preloader = () => {
         <section className="preloader container mx-auto px-8 flex flex-col items-center justify-center h-screen relative">
           <div className="preloader-inner sm:px-6 lg:px-10 w-full max-w-full lg:max-w-6xl z-20">
             <div className="preloader-inner-content grid grid-cols-[1.5fr_1fr_1.5fr] gap-4 grid-rows-[1fr_auto_1fr] h-screen rounded-lg py-4 transition-all duration-500 ease-in-out">
+              {/* Preloader Content for each video */}
               <PreloaderContent
                 vdoContent={vdoData.vdoData1}
                 alignment="items-end flex-row-reverse"

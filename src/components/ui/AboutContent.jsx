@@ -59,7 +59,7 @@ const AboutContent = ({ content, image, imageAlt }) => {
       </article>
       <article className="right-content w-full">
         <div className="right-inner relative flex-1">
-          <img src={image} alt={imageAlt} className="rounded-2xl object-cover shadow-sm h-full sm:h-[50vh] md:h-[70vh]" loading="lazy" />
+          <img src={image} alt={imageAlt} className="rounded-2xl object-cover shadow-sm h-full sm:h-[50vh] md:h-[70vh] w-full" loading="lazy" />
         </div>
       </article>
     </div>

@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useDispatch } from "react-redux";
@@ -20,6 +19,8 @@ export const usePreloaderAnimation = () => {
             if (currentValue < 100) {
                 currentValue++;
                 counterElement.textContent = currentValue;
+
+                // Handle video animations at specific counter points
                 loadingPoints.forEach((point, index) => {
                     if (currentValue === point) {
                         gsap.to(loadervdos[index], { opacity: 1, duration: 0.5, ease: "power2.inOut" });
@@ -28,6 +29,7 @@ export const usePreloaderAnimation = () => {
 
                 requestAnimationFrame(updateCounter);
             } else {
+                // Trigger animations after preloader completes
                 gsap.timeline({
                     onComplete: () => {
                         preloaderElement.style.display = "none";
@@ -47,8 +49,4 @@ export const usePreloaderAnimation = () => {
 
         return () => clearTimeout(timerId);
     }, [dispatch]);
-
-    return; // Remove return value since it's not needed anymore
 };
-
-export default usePreloaderAnimation;

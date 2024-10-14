@@ -4,23 +4,25 @@ import useMenuAnim from "../../hooks/useMenuAnim";
 import { Link } from "react-router-dom";
 import galas from "../../assets/image/logo/galas.webp";
 
-
-const Nav = ({ links }) => {
+const Nav = ({ links, setIsNavOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuRef] = useMenuAnim(isOpen);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    setIsNavOpen(!isOpen); // Update the header state when the menu is toggled
   };
 
   return (
-    <nav className="flex justify-between items-center w-full relative ">
+    <nav className="flex justify-between items-center w-full relative">
       {/* Mobile Menu */}
       <ul
         ref={menuRef}
         className={`${
           isOpen ? "block" : "hidden"
-        } absolute left-0 top-0 w-full  bg-customGray mb-2 md:hidden flex flex-col gap-2 sm:gap-4 justify-center items-center sm:space-y-4  py-4 transition-transform transform  ${
+        } absolute left-0 top-0 mx-auto bg-customGray  
+        w-full mb-2 md:hidden flex flex-col gap-2 sm:gap-4 justify-center items-center sm:space-y-4 py-4 transition-transform transform  
+        ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
         style={{ zIndex: 10 }}
@@ -47,7 +49,7 @@ const Nav = ({ links }) => {
 
         {links.map((link, index) => (
           <li key={index}>
-            <a href={link.path} className="text-white text-lg hover:text-teal-200 ">
+            <a href={link.path} className="text-white text-sm hover:text-teal-200 ">
               {link.label}
             </a>
           </li>
@@ -58,7 +60,7 @@ const Nav = ({ links }) => {
       <ul className="hidden md:flex space-x-8 text-center">
         {links.slice(0, 3).map((link, index) => (
           <li key={index}>
-            <a href={link.path} className="text-white hover:text-teal-200">
+            <a href={link.path} className="text-white hover:text-teal-200 ">
               {link.label}
             </a>
           </li>
@@ -66,17 +68,17 @@ const Nav = ({ links }) => {
       </ul>
 
       <Link to="/" aria-label="Homepage" className="flex items-center">
-          <img
-            className="w-auto h-14 shadow-none"
-            src={galas}
-            alt="Galas Entertainment"
-          />
-        </Link>
+        <img
+          className="w-auto h-14 shadow-none"
+          src={galas}
+          alt="Galas Entertainment"
+        />
+      </Link>
 
       <ul className="hidden md:flex space-x-8">
         {links.slice(3).map((link, index) => (
           <li key={index}>
-            <a href={link.path} className="text-white hover:text-teal-200">
+            <a href={link.path} className="text-white hover:text-teal-200 text-sm md:text-base ">
               {link.label}
             </a>
           </li>
@@ -113,6 +115,7 @@ Nav.propTypes = {
       label: PropTypes.string.isRequired,
     })
   ).isRequired,
+  setIsNavOpen: PropTypes.func.isRequired, // Add prop type for setIsNavOpen
 };
 
 export default memo(Nav);

@@ -15,7 +15,7 @@ export default function Preview() {
         <>
             <div className="section-space"></div>
             <section className="preview">
-                <div className="preview-inner container mx-auto px-6">
+                <div className="preview-inner container mx-auto px-4">
                     <PreviewContent
                         heading={heading}
                         description={description}

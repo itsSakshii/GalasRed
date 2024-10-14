@@ -29,7 +29,7 @@ export default function Blog() {
   return (
     <>
       <section className="event antialiased">
-        <div className="event-inner container mx-auto">
+        <div className="event-inner container mx-auto px-4">
           <div className="heading">
             <h2 className="content-heading text-center">
               Our <span className="text-teal-200">Blogs</span>
