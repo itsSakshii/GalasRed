@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogContent from '../ui/BlogContent';
-import img1 from '../../assets/image/section-image/Blog-1 (2).webp';
-import img2 from '../../assets/image/section-image/Blog-2 (2).webp';
+import img1 from '../../assets/image/section-image/Blog-1.webp';
+import img2 from '../../assets/image/section-image/Blog-2.webp';
 
 export default function Blog() {
   const blogPosts = [
