@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import herovdoPoster from "../../assets/videos/herovdoPoster.png"; 
-import herovdo from "../../assets/videos/herovdo.mp4";
+import herovdo from "../../assets/videos/herovdo (3).mp4";
 
 export default function HeroSection() {
     const videoRef = useRef(null);

@@ -1,29 +1,32 @@
 import React from 'react';
 import BlogContent from '../ui/BlogContent';
-import img1 from '../../assets/image/section-image/Blog-1.webp';
-import img2 from '../../assets/image/section-image/Blog-2.webp';
-
+import img1 from '../../assets/image/section-image/Blog-1 (2).webp';
+import img2 from '../../assets/image/section-image/Blog-2 (2).webp';
 
 export default function Blog() {
-
   const blogPosts = [
     {
       imageSrc: img1, 
       altText: "Event image showing business professionals",
-      heading: "Title Heading 1",
+      heading: (
+        <>
+          <span className="text-teal-400">Unforgettable Nights :</span>  Top 5 Music Festivals You Can't Miss in 2024
+        </>
+      ),
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cupiditate illum perferendis. Rerum vero eius distinctio voluptatem quas magni dolorum iusto maxime vel facilis sapiente odit laborum error, laudantium quod."
+        "Are you ready to experience music like never before? Whether you're a die-hard fan of electronic beats, rock anthems, or pop hits, 2024 is packed with music festivals that will blow your mind. From stunning stage designs to unforgettable performances, these festivals are the ultimate celebration of live entertainment. 2024 promises to be a year packed with electrifying performances and unforgettable moments. Get your tickets early and prepare for the musical adventure of a lifetime!"
     },
     {
       imageSrc: img2, 
       altText: "Event image showing business professionals",
-      heading: "Title Heading 2",
+      heading: (
+        <>
+          <span className="text-teal-400">Lights, Camera, Action!</span> How to Throw the Ultimate Movie-Themed Party
+        </>
+      ),
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cupiditate illum perferendis. Rerum vero eius distinctio voluptatem quas magni dolorum iusto maxime vel facilis sapiente odit laborum error, laudantium quod."
-    },
-   
-   
-
+        "Movie-themed parties are all the rage right now, and for a good reason—they are the perfect blend of creativity, fun, and nostalgia. Whether you're celebrating a birthday or just throwing a get-together, a well-executed movie-themed party can make you the star of the social scenes. With a little creativity and planning, your movie-themed party will be an event that people will be talking about for months."
+    }
   ];
 
   return (
@@ -42,7 +45,7 @@ export default function Blog() {
               key={index}
               imageSrc={post.imageSrc}
               altText={post.altText}
-              heading={post.heading}
+              heading={post.heading} // Updated to use JSX
               content={post.content}
               reverse={index % 2 !== 0} 
             />

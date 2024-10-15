@@ -12,7 +12,7 @@ const AboutContent = ({ content, image, imageAlt }) => {
             <div className="content w-1/2">
               <h2 className="text-teal-200">{content.heading}</h2>
               <div className="line-space"></div>
-              <p className="text-justify">{content.description}</p>
+              <p className="">{content.description}</p>
               <div className="line-space"></div>
               <div className="icon flex justify-start">
                 <a
@@ -35,7 +35,7 @@ const AboutContent = ({ content, image, imageAlt }) => {
             <div className="content w-1/2">
               <h3 className="text-teal-400">{content.subHeading}</h3>
               <div className="line-space"></div>
-              <p className="text-justify italic text-sm">{content.subDescription}</p>
+              <p className=" italic text-sm">{content.subDescription}</p>
               <div className="line-space"></div>
               <div className="icon flex justify-end">
                 <a
@@ -58,7 +58,7 @@ const AboutContent = ({ content, image, imageAlt }) => {
         </div>
       </article>
       <article className="right-content w-full">
-        <div className="right-inner relative flex-1">
+        <div className="right-inner relative flex-1 shadow-custom-sub">
           <img src={image} alt={imageAlt} className="rounded-2xl object-cover shadow-sm h-full sm:h-[50vh] md:h-[70vh] w-full" loading="lazy" />
         </div>
       </article>
