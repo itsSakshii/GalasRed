@@ -69,7 +69,7 @@ const Nav = ({ links, setIsNavOpen }) => {
 
       <Link to="/" aria-label="Homepage" className="flex items-center">
         <img
-          className="w-auto h-14 shadow-none"
+          className="w-auto h-10 md:h-12 shadow-none"
           src={galas}
           alt="Galas Entertainment"
         />

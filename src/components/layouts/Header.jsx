@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <>
       <header className={`header sticky top-0 left-0 z-50 bg-customGray ${isNavOpen ? 'py-0' : 'py-6'}`} role="banner">
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto px-4">
           <div className="header-inner flex justify-between items-center">
             <Nav links={navLinks} logo={logo} setIsNavOpen={setIsNavOpen} />
           </div>

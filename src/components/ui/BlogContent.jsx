@@ -5,7 +5,7 @@ import Button from './Button';
 const BlogContent = ({ imageSrc, altText, heading, content, reverse = false }) => {
   return (
     <article
-      className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} justify-center items-center gap-10 my-8 w-full`}
+      className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} justify-center items-center gap-10 mb-8 w-full`}
     >
      
       <div className="event-img w-full md:w-1/3 h-80 shadow-custom">
@@ -18,7 +18,7 @@ const BlogContent = ({ imageSrc, altText, heading, content, reverse = false }) =
 
 
       <div className="event-content w-full md:w-1/2">
-        <div className="content-inner flex flex-col  gap-2 justify-center items-center md:items-start md:justify-start h-full">
+        <div className="content-inner flex flex-col justify-center items-center md:items-start md:justify-start h-full">
           <h4 className="event-heading font-semibold text-xl leading-loose">{heading}</h4>
           <div className="line-space"></div>
           <p className="   hyphens-auto italic font-extralight text-sm leading-loose">{content}</p>
