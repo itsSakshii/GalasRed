@@ -6,10 +6,8 @@ import App from './App.jsx';
 import './index.scss';
 
 // Create the root element for React
-const root = createRoot(document.getElementById('root'));
+ createRoot(document.getElementById("root")).render(
 
-// Render the App wrapped in the Redux Provider
-root.render(
   <StrictMode>
     <Provider store={store}>
       <App />
