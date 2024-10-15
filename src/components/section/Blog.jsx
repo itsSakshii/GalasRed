@@ -45,7 +45,7 @@ export default function Blog() {
               key={index}
               imageSrc={post.imageSrc}
               altText={post.altText}
-              heading={post.heading} // Updated to use JSX
+              heading={post.heading} 
               content={post.content}
               reverse={index % 2 !== 0} 
             />
